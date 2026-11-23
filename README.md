@@ -17,6 +17,14 @@ is the figure that matters in VR, so that is the one it leads with.
 It asks each program to close politely and leaves anything that refuses, in case you have
 unsaved work in it. **Bring back** puts them all back when you have landed.
 
+Then it starts the other half of your VR stack: the headset streamer, whatever drives your
+base or your pedals, anything doing haptics. You set that list up once, drag it into the
+order you want, and it can start DCS last once the rest are up. Tick one box and closing runs
+straight on into starting, so a single press is the whole pre-flight.
+
+It will also clear DCS's shader cache, which is the usual fix after a DCS update. It tells
+you what it will delete and that the next flight will load slowly, before anything goes.
+
 **After you fly.** Leave recording on and it measures each flight by itself: it starts when
 DCS starts, stops when DCS closes, and samples every ten seconds. Afterwards it tells you
 whether your processor or your graphics card was the limit, because the answer changes which
@@ -38,20 +46,20 @@ graphics card, with the reason on hover.
 
 ## Download
 
-Grab `DCS-PreFlight-0.16.0.exe` from the [Releases](../../releases) page. It is about 62 MB
+Grab `DCS-PreFlight-0.17.0.exe` from the [Releases](../../releases) page. It is about 62 MB
 because everything it needs is inside it. There is nothing to install and nothing to
 configure. Put it anywhere you like and run it.
 
-SHA-256 of the 0.16.0 build:
+SHA-256 of the 0.17.0 build:
 
 ```
-b73704ad1a9c8862604de09e95cd164a123caaddb38db996895d5b093d659585
+09e8d4387f065b57e5c58d8378d861bda4c5694d636bc636610b24effa8e3c21
 ```
 
 Check it before you run it if you like:
 
 ```powershell
-Get-FileHash .\DCS-PreFlight-0.16.0.exe -Algorithm SHA256
+Get-FileHash .\DCS-PreFlight-0.17.0.exe -Algorithm SHA256
 ```
 
 ### Windows will warn you the first time
@@ -66,6 +74,16 @@ hash above is the real check, and it is a better one.
 - Windows 10 or 11, 64-bit
 - DCS World
 - Nothing else. The .NET runtime is inside the download.
+
+## If it cannot find DCS
+
+It looks in the Saved Games folder Windows reports, which follows that folder if you have
+moved it to another drive or let OneDrive redirect it. It does not need to be run from any
+particular place, and there is nothing to configure first.
+
+If it still cannot find it, open **DCS profiles** and press **Tell us where DCS is**. Point it
+at either your Saved Games folder or the DCS folder inside it. Both work, and it checks the
+folder before it keeps it, so a wrong one says so straight away.
 
 ## What it can and cannot measure
 
