@@ -53,7 +53,7 @@ configure. Put it anywhere you like and run it.
 SHA-256 of the 0.17.0 build:
 
 ```
-09e8d4387f065b57e5c58d8378d861bda4c5694d636bc636610b24effa8e3c21
+9b2c1add487f1a2399418b23ecdc4ed0e03a0a4e798531a740c44eabf915668e
 ```
 
 Check it before you run it if you like:
@@ -74,6 +74,16 @@ hash above is the real check, and it is a better one.
 - Windows 10 or 11, 64-bit
 - DCS World
 - Nothing else. The .NET runtime is inside the download.
+
+## Updating
+
+From 0.17.0 on it updates itself. When a new version is out you get a small **Update to
+x.y.z** button next to the version number; press it to see what changed and take it or leave
+it. Nothing downloads until you say so, and the download is checked against the published
+checksum before anything is replaced.
+
+If you are on 0.16.0 you will need to download 0.17.0 by hand this once, since the older
+build has no updater in it.
 
 ## If it cannot find DCS
 
@@ -109,9 +119,16 @@ Mostly it reads.
 - It writes to DCS's own options file only when you press **Apply**, and it copies your
   current settings first. **Undo last apply** puts them back.
 
-Nothing leaves your machine. There is no telemetry, no account, no network code in it at all.
-Everything it keeps lives in `%LOCALAPPDATA%\DCS-PreFlight`, and you can delete that folder
-whenever you like.
+Nothing about you leaves your machine. There is no telemetry and no account. Everything it
+keeps lives in `%LOCALAPPDATA%\DCS-PreFlight`, and you can delete that folder whenever you
+like.
+
+One thing does use the network, and only one. On start it reads this project's release list
+on GitHub to see whether there is a newer version, and if there is, it offers it. That
+request sends nothing about you, your machine or what you fly. If you take the update, it
+downloads the new file, checks it against the checksum published with the release, and only
+then puts it in place. You can turn the whole thing off with **Tell me when there is a newer
+version** on the Prepare tab, and then it never goes anywhere at all.
 
 ## Terms
 
