@@ -46,20 +46,20 @@ graphics card, with the reason on hover.
 
 ## Download
 
-Grab `DCS-PreFlight-0.17.0.exe` from the [Releases](../../releases) page. It is about 62 MB
+Grab `DCS-PreFlight-0.17.1.exe` from the [Releases](../../releases) page. It is about 62 MB
 because everything it needs is inside it. There is nothing to install and nothing to
 configure. Put it anywhere you like and run it.
 
-SHA-256 of the 0.17.0 build:
+SHA-256 of the 0.17.1 build:
 
 ```
-9b2c1add487f1a2399418b23ecdc4ed0e03a0a4e798531a740c44eabf915668e
+fc38dd3a746455ef854d457d6ec1f2cbb511f470d876b28176d59319696b1563
 ```
 
 Check it before you run it if you like:
 
 ```powershell
-Get-FileHash .\DCS-PreFlight-0.17.0.exe -Algorithm SHA256
+Get-FileHash .\DCS-PreFlight-0.17.1.exe -Algorithm SHA256
 ```
 
 ### Windows will warn you the first time
@@ -82,7 +82,7 @@ x.y.z** button next to the version number; press it to see what changed and take
 it. Nothing downloads until you say so, and the download is checked against the published
 checksum before anything is replaced.
 
-If you are on 0.16.0 you will need to download 0.17.0 by hand this once, since the older
+If you are on 0.16.0 you will need to download the latest version by hand this once, since the older
 build has no updater in it.
 
 ## If it cannot find DCS
